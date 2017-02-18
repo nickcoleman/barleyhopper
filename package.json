@@ -1,0 +1,24 @@
+{
+  "name": "barleyhopper",
+  "version": "0.0.0",
+  "description": "Hello Exponent!",
+  "author": null,
+  "private": true,
+  "main": "main.js",
+  "dependencies": {
+    "@exponent/vector-icons": "~4.0.0",
+    "exponent": "^14.0.0",
+    "firebase": "^3.6.6",
+    "lodash": "^4.17.4",
+    "native-base": "^0.5.22",
+    "react": "~15.4.0",
+    "react-native": "https://github.com/exponent/react-native/archive/sdk-14.0.0.tar.gz",
+    "react-native-communications": "^2.2.1",
+    "react-native-maps": "^0.12.4",
+    "react-native-router-flux": "^3.35.0",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "whatwg-fetch": "^2.0.2"
+  }
+}
