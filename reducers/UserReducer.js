@@ -2,7 +2,7 @@ import React from 'react'
 
 import {
   INPUT_UPDATE,
-} from '../actions'
+} from '../actions/types'
 
 const INITIAL_STATE = {
   locationChoice: '',

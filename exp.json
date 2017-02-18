@@ -1,21 +1,35 @@
 {
-  "name": "barleyhopper",
-  "description": "An empty new project",
+  "name": "Barley Hopper",
+  "description": "Find that perfect microbrewery",
   "slug": "barleyhopper",
   "privacy": "public",
   "sdkVersion": "14.0.0",
   "version": "1.0.0",
   "orientation": "portrait",
   "primaryColor": "#cccccc",
-  "icon": "https://s3.amazonaws.com/exp-brand-assets/ExponentEmptyManifest_192.png",
+  "icon": "./components/img/beerRabbitIcon.png",
   "loading": {
-    "icon": "https://s3.amazonaws.com/exp-brand-assets/ExponentEmptyManifest_192.png",
+    "icon": "./components/img/beerRabbitIcon.png",
     "hideExponentText": false
   },
   "packagerOpts": {
     "assetExts": ["ttf", "mp4"]
   },
   "ios": {
-    "supportsTablet": true
+    "supportsTablet": true,
+    "bundleIdentifier": "io.nickcoleman.barlyhopper",
+    "supportsTablet": true,
+    "config": {
+      "usesNonExemptEncryption": false
+    }
+  },
+  "android": {
+    "package": "io.nickcoleman.barleyhopper",
+    "versionCode": 1,
+    "config": {
+      "googleMaps": {
+        "apiKey": "AIzaSyDzk0eKI5tnKWkSORpDTL32iZ15QjxQxeg"
+      }
+    }
   }
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 import {
   FETCH_BREWERY_LOCATIONS_SUCCESS,
-} from '../actions'
+} from '../actions/types'
 
 const INITIAL_STATE = {
   brewery: []

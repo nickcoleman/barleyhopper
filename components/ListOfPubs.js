@@ -6,7 +6,7 @@ import { CardSection } from './common';
 class ListItem extends Component {
   onRowPress() {
     // Actions.showPub()
-    Actions.showPub({location: this.props.brewery})
+    Actions.showPub({ location: this.props.brewery })
   }
 
   render() {

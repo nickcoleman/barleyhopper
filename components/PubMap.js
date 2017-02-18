@@ -16,8 +16,8 @@ class PubMap extends Component {
     const lat = this.props.brewery[0].latitude
     const lon = this.props.brewery[0].longitude
     const region = {
-      latitude: 40.6417724,
-      longitude: -111.4946778,
+      latitude: lat,
+      longitude: lon,
       latitudeDelta: 0.0922,
       longitudeDelta: 0.0421,
     }
@@ -54,24 +54,6 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
 });
-
-// const styles = {
-//   buttonStyle: {
-//     alignSelf: 'center',
-//     marginTop: 10,
-//     marginBottom: 10,
-//     width: 300
-//   },
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#F5FCFF',
-//   },
-//   map: {
-//     ...StyleSheet.absoluteFillObject,
-//   },
-// }
 
 const mapStatetoProps = state => {
   const { brewery } = state.pub

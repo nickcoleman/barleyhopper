@@ -14,40 +14,35 @@ import {
   reverseGeoLocLookup,
 } from '../actions'
 
-class FindPubs extends Component {
+const barleylogo = require('./img/hops_and_barley.png')
+const hopIcon = require('./img/barley-icon.png')
+const beerRabbit = require('./img/beerRabbit.png')
 
-  // state = {
-  //   initialPosition: {},
-  //   lastPosition: '',
-  //   coords: {}
-  // }
+class FindPubs extends Component {
 
   onSearchButtonPress() {
     if (!this.props.locationChoice) {
       this.props.inputUpdate({ prop: 'locationChoice', value: 'Location Required' })
       console.log('no location choice')
-    }
-    else if (this.props.pubChoice) {
+    } else if (this.props.pubChoice) {
       this.props.fetchBreweryLocation(this.props.pubChoice, this.props.locationChoice)
-    }
-    else {
+    } else {
       this.props.fetchBreweryLocations(this.props.locationChoice)
     }
   }
-
 
   onCurrentLocationButtonPress() {
     console.log('onCurrentLocationButtonPress')
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         position => {
-          let latitude = position.coords.latitude
-          let longitude = position.coords.longitude
+          const latitude = position.coords.latitude
+          const longitude = position.coords.longitude
           console.log('lat-lon: ', latitude, ',', longitude)
           this.props.reverseGeoLocLookup(latitude, longitude)
         },
         (error) => alert(JSON.stringify(error)),
-        {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
+        { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
       );
     } else {
       console.log('navigator.geolocation failed')
@@ -55,16 +50,11 @@ class FindPubs extends Component {
   }
 
   render() {
-    const barleylogo = require('./img/hops_and_barley.png')
-    const hopIcon = require('./img/barley-icon.png')
-    const beerRabbit = require('./img/beerRabbit.png')
     return (
       <Container style={styles.containerStyle}>
       <Content>
         <Thumbnail source={beerRabbit} style={styles.rabbitStyle} />
         <Title sytle={styles.titleStyle}>Brewery And Pub Locations </Title>
-
-
           <Input
             style={styles.inputStyle}
             placeholder="Enter City"
@@ -79,16 +69,16 @@ class FindPubs extends Component {
           rounded warning
           style={styles.buttonSearchStyle}
           onPress={this.onSearchButtonPress.bind(this)}
-          >
+        >
           Search
         </Button>
 
         <Text style={styles.textStyle}><Thumbnail source={hopIcon} style={styles.iconStyle} /></Text>
         <Button
           bordered rounded small warning
-          style={styles.buttonStyle}
+          style={styles.buttonCurrentLocatonStyle}
           onPress={this.onCurrentLocationButtonPress.bind(this)}
-          >
+        >
           Or Use Current Location
         </Button>
 
@@ -117,7 +107,7 @@ const styles = {
     marginBottom: 10
   },
 
-  buttonStyle: {
+  buttonCurrentLocatonStyle: {
     alignSelf: 'center',
     marginTop: 10,
     marginBottom: 10,
@@ -129,7 +119,7 @@ const styles = {
     alignSelf: 'center',
     marginTop: 10,
     marginBottom: 10,
-    width: 300
+    width: 300,
   },
 
   inputStyle: {
@@ -140,7 +130,7 @@ const styles = {
     paddingBottom: 10,
     paddingTop: 10,
     marginTop: 20,
-    backgroundColor: '#fff5e6',
+    backgroundColor: '#FFEBCD',
     width: 300
   },
 

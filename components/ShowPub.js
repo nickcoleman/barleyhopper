@@ -18,7 +18,7 @@ class ShowPub extends Component {
       if (supported) {
         Linking.openURL(website);
       } else {
-        console.log('Don\'t know how to open URI: ' + website);
+        console.log('Dont know how to open URI: ', website);
       }
     });
   };
@@ -35,7 +35,7 @@ class ShowPub extends Component {
       phone, streetAddress, locality, region, postalCode
     } = this.props.location
     let medium = '';
-    if ( brewery.images !== undefined) {
+    if (brewery.images !== undefined) {
       medium = brewery.images.medium
     }
     const {
@@ -55,7 +55,7 @@ class ShowPub extends Component {
             <Button
               bordered round small warning
               style={styles.buttonStyle}
-              onPress={() => this.handleMapClick(name, longitude,lattitude)}
+              onPress={() => this.handleMapClick(name, longitude, lattitude)}
             >
               Map It
             </Button>
@@ -77,16 +77,16 @@ class ShowPub extends Component {
 
           <Card style={styles.cardStyle}>
             <Text style={styles.sectionTitleStyle}>More Info:</Text>
-            <Thumbnail source={{uri: medium}} style={styles.imageStyle} />
+            <Thumbnail source={{ uri: medium }} style={styles.imageStyle} />
 
             <Text style={styles.textInfoStyle}>
-              <Text style={{color: '#cc7a00'}}>Established: </Text>
-              {established  || 'unknown'}
+              <Text style={{ color: '#cc7a00' }}>Established: </Text>
+              {established || 'unknown'}
             </Text>
 
             <Text style={styles.textInfoStyle}>
-              <Text style={{color: '#cc7a00'}}>Type: </Text>
-              {locationTypeDisplay  || 'Pub'}
+              <Text style={{ color: '#cc7a00' }}>Type: </Text>
+              {locationTypeDisplay || 'Pub'}
             </Text>
 
             <Text style={styles.textInfoStyle}>
