@@ -22,8 +22,9 @@ class FindPubs extends Component {
 
   onSearchButtonPress() {
     if (!this.props.locationChoice) {
-      this.props.inputUpdate({ prop: 'locationChoice', value: 'Location Required' })
-      console.log('no location choice')
+      // TODO: Error Message saying 'Location Required'
+      // this.props.inputUpdate({ prop: 'locationChoice', value: 'Location Required' })
+      // console.log('no location choice')
     } else if (this.props.pubChoice) {
       this.props.fetchBreweryLocation(this.props.pubChoice, this.props.locationChoice)
     } else {

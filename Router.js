@@ -18,7 +18,7 @@ import PubMap from './components/PubMap'
 const RouterComponent = () => {
   return (
     <Router
-      sceneStyle={{ paddingTop: Platform.OS === 'ios' ? 65 : 55 }}
+      sceneStyle={{ paddingTop: Platform.OS === 'ios' ? 64 : 54 }}
       navigationBarStyle={{ backgroundColor: '#DC8351' }}
       titleStyle={{ color: 'white' }}
       barButtonTextStyle={{ color: '#fff' }}
@@ -28,9 +28,9 @@ const RouterComponent = () => {
     >
       <Scene key="main">
         <Scene initial key="findPubs" component={FindPubs} title="Barley Hopper" />
-        <Scene key="pubList" component={PubList} title="Locations" />
-        <Scene key="pubMap" component={PubMap} title="Map to Brewery" />
-        <Scene key="showPub" component={ShowPub} title="Brewery Info" />
+        <Scene key="pubList" component={PubList} title="Locations" onLeft={() => Actions.findPubs({ type: 'reset' })} />
+        <Scene key="pubMap" component={PubMap} title="Map to Brewery" onLeft={() => Actions.pubList()} />
+        <Scene key="showPub" component={ShowPub} title="Brewery Info" onLeft={() => Actions.pubList()} />
       </Scene>
     </Router>
   );

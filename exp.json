@@ -4,12 +4,12 @@
   "slug": "barleyhopper",
   "privacy": "public",
   "sdkVersion": "14.0.0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "orientation": "portrait",
   "primaryColor": "#cccccc",
   "icon": "./components/img/beerRabbitIcon.png",
   "loading": {
-    "icon": "./components/img/barleyRabbitNotification.png",
+    "icon": "./components/img/beerRabbitIcon.png",
     "hideExponentText": false
   },
   "packagerOpts": {
