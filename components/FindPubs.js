@@ -112,7 +112,7 @@ const styles = {
     marginTop: 10,
     marginBottom: 10,
     width: 200,
-    backgroundColor: '#fff5e6'
+    backgroundColor: '#fff'
   },
 
   buttonSearchStyle: {
@@ -130,7 +130,7 @@ const styles = {
     paddingBottom: 10,
     paddingTop: 10,
     marginTop: 20,
-    backgroundColor: '#FFEBCD',
+    backgroundColor: '#fff',
     width: 300
   },
 

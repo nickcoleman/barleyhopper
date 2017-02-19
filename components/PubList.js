@@ -68,7 +68,7 @@ const styles = {
     marginTop: 10,
     marginBottom: 10,
     width: 300,
-    backgroundColor: '#fff5e6'
+    backgroundColor: '#fff'
   },
 
   listViewStyle: {

@@ -19,12 +19,12 @@ const RouterComponent = () => {
   return (
     <Router
       sceneStyle={{ paddingTop: Platform.OS === 'ios' ? 65 : 55 }}
-      navigationBarStyle={{ backgroundColor: '#85C5C8' }}
+      navigationBarStyle={{ backgroundColor: '#DC8351' }}
       titleStyle={{ color: 'white' }}
-      barButtonTextStyle={{ color: '#fef267' }}
+      barButtonTextStyle={{ color: '#fff' }}
       barButtonIconStyle={{ tintColor: 'rgb(254, 242, 103)' }}
-      rightButtonTextStyle={{ color: '#ffca63' }}
-      leftButtonTextStyle={{ color: '#ffca63' }}
+      rightButtonTextStyle={{ color: '#ffe180' }}
+      leftButtonTextStyle={{ color: '#ffe180' }}
     >
       <Scene key="main">
         <Scene initial key="findPubs" component={FindPubs} title="Barley Hopper" />
