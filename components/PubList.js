@@ -18,8 +18,9 @@ class PubList extends Component {
   }
 
   onMapButtonPress() {
-    Actions.pubMap()
-    // console.log('onMapButtonPress')
+    if (this.props.brewery.length > 0) {
+      Actions.pubMap({ type: 'reset' })
+    }
   }
 
   createDataSource({ brewery }) {
@@ -76,8 +77,8 @@ const styles = {
   }
 }
 
-const mapStatetoProps = state => {
-  const { brewery } = state.pub
+const mapStatetoProps = ({ pub }) => {
+  const { brewery } = pub
   return { brewery }
 }
 

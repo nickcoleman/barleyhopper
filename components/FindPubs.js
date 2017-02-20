@@ -24,8 +24,8 @@ class FindPubs extends Component {
     if (!this.props.locationChoice) {
       // TODO: Error Message saying 'Location Required'
       // this.props.inputUpdate({ prop: 'locationChoice', value: 'Location Required' })
-      // console.log('no location choice')
     } else if (this.props.pubChoice) {
+      // finds specific brewery in a city
       this.props.fetchBreweryLocation(this.props.pubChoice, this.props.locationChoice)
     } else {
       this.props.fetchBreweryLocations(this.props.locationChoice)
@@ -33,13 +33,13 @@ class FindPubs extends Component {
   }
 
   onCurrentLocationButtonPress() {
-    console.log('onCurrentLocationButtonPress')
+    // console.log('onCurrentLocationButtonPress')
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         position => {
           const latitude = position.coords.latitude
           const longitude = position.coords.longitude
-          console.log('lat-lon: ', latitude, ',', longitude)
+          // console.log('lat-lon: ', latitude, ',', longitude)
           this.props.reverseGeoLocLookup(latitude, longitude)
         },
         (error) => alert(JSON.stringify(error)),
