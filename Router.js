@@ -28,9 +28,9 @@ const RouterComponent = () => {
     >
       <Scene key="main">
         <Scene initial key="findPubs" component={FindPubs} title="Barley Hopper" />
-        <Scene key="pubList" component={PubList} title="Locations" onLeftTitle="Home" onLeft={() => Actions.findPubs({ type: 'reset' })} />
-        <Scene key="pubMap" component={PubMap} title="Map to Brewery" />
-        <Scene key="showPub" component={ShowPub} title="Brewery Info" onLeftTitle="<" onLeft={() => Actions.pubList()} />
+        <Scene key="pubList" component={PubList} title="Locations" leftButtonImage={require('./assets/images/house.png')} onLeft={() => Actions.findPubs({ type: 'reset' })} />
+        <Scene key="pubMap" component={PubMap} title="Breweries" leftTitle="Back" onLeft={() => Actions.pubList({ type: 'reset' })} />
+        <Scene key="showPub" component={ShowPub} title="Brewery Info" leftTitle="Back" onLeft={() => Actions.pubList({ type: 'reset' })} />
       </Scene>
     </Router>
   );

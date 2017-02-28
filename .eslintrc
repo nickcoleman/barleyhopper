@@ -2,13 +2,14 @@
   "extends": "rallycoding",
   "rules": {
     "arrow-body-style": 0,
-    "semi": 0,
+    "global-require": 0,
+    "max-len": 0,
     "no-multiple-empty-lines": 0,
     "no-shadow": 0,
     "no-unused-vars": 0,
     "no-unused-expressions": 0,
     "no-underscore-dangle": 0,
-    "max-len": 0,
     "no-undef":0,
+    "semi": 0,
   }
 }

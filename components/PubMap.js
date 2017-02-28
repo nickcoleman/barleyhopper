@@ -2,12 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Components } from 'exponent';
 import { View, Dimensions, StyleSheet, Text } from 'react-native'
-// import {
-//   Container, Content, Button,
-//   Input, Icon, Item, Title
-// } from 'native-base';
-
-
 
 class PubMap extends Component {
   renderMarkers() {
@@ -21,7 +15,7 @@ class PubMap extends Component {
               latitude: marker.latitude,
               longitude: marker.longitude,
             }}
-            pinColor="blue"
+            pinColor="#DC8351"
             title={marker.brewery.name}
           />
         )
@@ -47,25 +41,6 @@ class PubMap extends Component {
     )
   }
 }
-
-// <Components.MapView.Marker
-//   coordinate={{
-//     latitude: lat,
-//     longitude: lon,
-//   }}
-//   pinColor="orange"
-//   title="Test Point"
-//   description="Test Point description"
-// />
-// <Components.MapView.Marker
-//   coordinate={{
-//     latitude: this.props.brewery[1].latitude,
-//     longitude: this.props.brewery[1].longitude,
-//   }}
-//   pinColor="black"
-//   title="Test Point 2"
-//   description="Test Point 2 description"
-// />
 
 const { height, width } = Dimensions.get('window')
 
